@@ -1,6 +1,6 @@
 import { ApolloClient, createNetworkInterface } from 'react-apollo'
 
-const uri = __DEV__ ? 'http://localhost:3080/graphql' : 'http://120.131.9.142:3080/8B8kMWAunyMhxM9q9OhMVCJiXpxBIqpo'
+const uri = __DEV__ ? 'http://localhost:3080/graphql' : 'https://prod.pigeon.51ijk.com/8B8kMWAunyMhxM9q9OhMVCJiXpxBIqpo'
 
 console.log('__DEV__', __DEV__)
 
