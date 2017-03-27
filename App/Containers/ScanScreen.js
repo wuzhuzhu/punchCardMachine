@@ -131,7 +131,7 @@ class ScanScreen extends React.Component {
           keepAwake
         >
           <ScannerRec />
-          <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
+          {/* <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text> */}
           <Text
             style={styles.capture}
             onPress={() => this.onBarCodeRead({
@@ -152,7 +152,7 @@ class ScanScreen extends React.Component {
               })})}>
             [SIMULAT_BLANK]
           </Text>
-          {/* <Text
+          <Text
             style={styles.capture}
             onPress={() => this.onBarCodeRead({
               type: 'simulate',
@@ -161,7 +161,7 @@ class ScanScreen extends React.Component {
                 name: 'blankPatientName'
               })})}>
             [{this.props.patientName || '没有二维码'}]
-          </Text> */}
+          </Text>
         </Camera>
       </View>
     )
