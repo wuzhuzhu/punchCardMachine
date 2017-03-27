@@ -2,6 +2,7 @@ import { takeLatest } from 'redux-saga'
 import API from '../Services/Api'
 import FixtureAPI from '../Services/FixtureApi'
 import DebugConfig from '../Config/DebugConfig'
+// import apolloClient from '../Config/apolloClientConfig'
 
 /* ------------- Types ------------- */
 
@@ -9,6 +10,7 @@ import { StartupTypes } from '../Redux/StartupRedux'
 import { GithubTypes } from '../Redux/GithubRedux'
 import { LoginTypes } from '../Redux/LoginRedux'
 import { OpenScreenTypes } from '../Redux/OpenScreenRedux'
+// import { ScanScreenTypes } from '../Redux/ScanRedux'
 
 /* ------------- Sagas ------------- */
 
@@ -16,6 +18,7 @@ import { startup } from './StartupSagas'
 import { login } from './LoginSagas'
 import { getUserAvatar } from './GithubSagas'
 import { openScreen } from './OpenScreenSagas'
+// import { saveLoginLogout } from './ScanScreenSagas'
 
 /* ------------- API ------------- */
 
@@ -34,5 +37,6 @@ export default function * root () {
 
     // some sagas receive extra parameters in addition to an action
     takeLatest(GithubTypes.USER_REQUEST, getUserAvatar, api)
+    // takeLatest(ScanScreenTypes.CHANGE_SCAN_RESULT, apolloClient),
   ]
 }

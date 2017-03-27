@@ -4,6 +4,7 @@ import Config from '../Config/DebugConfig'
 import createSagaMiddleware from 'redux-saga'
 import RehydrationServices from '../Services/RehydrationServices'
 import ReduxPersist from '../Config/ReduxPersist'
+import apolloClient from '../Config/apolloClientConfig'
 
 // creates the store
 export default (rootReducer, rootSaga) => {
@@ -11,6 +12,10 @@ export default (rootReducer, rootSaga) => {
 
   const middleware = []
   const enhancers = []
+
+  /* ------------- apollo Middleware ------------- */
+
+  middleware.push(apolloClient.middleware())
 
   /* ------------- Saga Middleware ------------- */
 

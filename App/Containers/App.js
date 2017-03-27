@@ -1,8 +1,12 @@
 import '../Config'
 import React, { Component } from 'react'
-import { Provider } from 'react-redux'
+// import { Provider } from 'react-redux'
+import { ApolloProvider } from 'react-apollo'
+
 import RootContainer from './RootContainer'
 import createStore from '../Redux'
+
+import apolloClient from '../Config/apolloClientConfig'
 
 // create our store
 const store = createStore()
@@ -19,9 +23,9 @@ const store = createStore()
 class App extends Component {
   render () {
     return (
-      <Provider store={store}>
+      <ApolloProvider store={store} client={apolloClient}>
         <RootContainer />
-      </Provider>
+      </ApolloProvider>
     )
   }
 }
