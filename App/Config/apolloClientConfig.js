@@ -11,6 +11,4 @@ const apolloClient = new ApolloClient({
   })
 })
 
-console.log(apolloClient.mutate)
-
 export default apolloClient
